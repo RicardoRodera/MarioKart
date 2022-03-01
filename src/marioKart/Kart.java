@@ -1,5 +1,6 @@
 package marioKart;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class Kart {
@@ -66,7 +67,6 @@ public class Kart {
 		this.random = random;
 	}
 
-
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -81,4 +81,15 @@ public class Kart {
 		builder.append("]");
 		return builder.toString();
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof Kart))
+			return false;
+		Kart other = (Kart) obj;
+		return Objects.equals(driver, other.driver);
+	}
+
 }

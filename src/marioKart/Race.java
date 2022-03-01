@@ -48,4 +48,35 @@ public class Race {
 		this.finishedKarts.add(this.karts.remove(pos));
 	}
 
+	public String showResult() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(this.name);
+		sb.append(this.circuit.toString());
+		for (Kart kart : finishedKarts) {
+			sb.append(kart.toString());
+		}
+
+		return sb.toString();
+	}
+
+	public void addKart(Kart kart) {
+		this.karts.add(kart);
+	}
+
+	public void setCircuit(Circuit circuit) {
+		this.circuit = circuit;
+	}
+
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+
+		sb.append(this.name);
+		sb.append(this.circuit.toString());
+		for (Kart kart : karts) {
+			sb.append(kart.toString());
+		}
+
+		return sb.toString();
+	}
 }
