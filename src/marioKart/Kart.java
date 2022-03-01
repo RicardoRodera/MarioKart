@@ -19,6 +19,7 @@ public class Kart {
 
 	private void init() {
 		this.position = 0;
+		this.random = new Random();
 		this.speed = random.nextInt(MAX_POINTS);
 		this.acceleration = MAX_POINTS - this.speed;
 	}

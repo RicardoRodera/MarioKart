@@ -1,6 +1,7 @@
 package marioKart;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Race {
@@ -18,10 +19,12 @@ public class Race {
 
 	public void run() {
 		while (notAllFinished()) {
-			for (Kart kart : karts) {
+			for (int i = 0; i < karts.size(); i++) {
+				Kart kart = karts.get(i);
 				moveKart(kart);
 				if (isFinished(kart)) {
 					moveToFinished(kart);
+					i--;
 				}
 			}
 		}

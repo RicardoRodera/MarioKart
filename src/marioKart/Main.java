@@ -24,7 +24,7 @@ public class Main {
 
 		System.out.println("**** Game Over****");
 
-		race.showResult();
+		System.out.println(race.showResult());
 
 	}
 
