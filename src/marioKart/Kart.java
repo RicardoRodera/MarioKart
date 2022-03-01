@@ -77,8 +77,6 @@ public class Kart {
 		builder.append(speed);
 		builder.append(", acceleration=");
 		builder.append(acceleration);
-		builder.append(", position=");
-		builder.append(position);
 		builder.append("]");
 		return builder.toString();
 	}

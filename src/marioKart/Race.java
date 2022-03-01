@@ -54,11 +54,17 @@ public class Race {
 	public String showResult() {
 		StringBuilder sb = new StringBuilder();
 
+		sb.append("Race: ");
 		sb.append(this.name);
+		sb.append("\nCircuit: ");
 		sb.append(this.circuit.toString());
 		for (Kart kart : finishedKarts) {
+			sb.append("\n");
+			sb.append(finishedKarts.indexOf(kart) + 1);
+			sb.append(".-");
 			sb.append(kart.toString());
 		}
+		sb.append("\n");
 
 		return sb.toString();
 	}
@@ -74,11 +80,17 @@ public class Race {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 
+		sb.append("Race: ");
 		sb.append(this.name);
+		sb.append("\nCircuit: ");
 		sb.append(this.circuit.toString());
 		for (Kart kart : karts) {
+			sb.append("\n");
+			sb.append(karts.indexOf(kart) + 1);
+			sb.append(".-");
 			sb.append(kart.toString());
 		}
+		sb.append("\n");
 
 		return sb.toString();
 	}
